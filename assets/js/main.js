@@ -47,7 +47,12 @@
         }
       });
     }, { rootMargin: '0px 0px -100px 0px' });
-    items.forEach(el => io.observe(el));
+    items.forEach(el => {
+      // 読み込み時点で画面内にあるもの（ファーストビュー）は、スクロールを待たずに出す。
+      // 判定は、フェード用に 80px 下へずらす前の位置で行う
+      if (el.getBoundingClientRect().top - 80 < window.innerHeight) el.classList.add('is-in');
+      else io.observe(el);
+    });
   }
 
   /* ---------- ヘッダー・SP固定CTA ---------- */
