@@ -72,15 +72,46 @@
   /* ---------- SPメニュー ---------- */
   const toggle = document.querySelector('.menu-toggle');
   const menu = document.getElementById('sp-menu');
+  const closeBtn = menu.querySelector('.sp-menu__close');
   const setMenu = open => {
+    const wasOpen = menu.classList.contains('is-open');
     toggle.setAttribute('aria-expanded', String(open));
     menu.classList.toggle('is-open', open);
     menu.setAttribute('aria-hidden', String(!open));
     document.body.style.overflow = open ? 'hidden' : '';
+    if (open) closeBtn.focus({ preventScroll: true });
+    else if (wasOpen) toggle.focus({ preventScroll: true });
   };
   toggle.addEventListener('click', () => setMenu(toggle.getAttribute('aria-expanded') !== 'true'));
   menu.querySelectorAll('[data-menu-close]').forEach(el => el.addEventListener('click', () => setMenu(false)));
-  document.addEventListener('keydown', e => { if (e.key === 'Escape') setMenu(false); });
+  document.addEventListener('keydown', e => { if (e.key === 'Escape' && menu.classList.contains('is-open')) setMenu(false); });
+
+  /* ---------- FAQ のアコーディオン（高さをゆっくり変えて開閉） ---------- */
+  const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  document.querySelectorAll('details.qa').forEach(d => {
+    const summary = d.querySelector('summary');
+    const body = d.querySelector('.qa__a');
+    let anim = null;
+    summary.addEventListener('click', e => {
+      if (reduceMotion || !body.animate) return; // 動きを減らす設定では標準の開閉
+      e.preventDefault();
+      // 閉じているときは 0 から。開閉の途中で押されたときは今の高さから
+      const from = d.open ? body.getBoundingClientRect().height : 0;
+      if (anim) anim.cancel();
+      const opening = !d.open || d.classList.contains('is-closing');
+      if (opening) {
+        d.classList.remove('is-closing');
+        d.open = true;
+        const to = body.scrollHeight;
+        anim = body.animate({ height: [`${from}px`, `${to}px`], opacity: [from ? 1 : 0, 1] }, { duration: 400, easing: 'ease' });
+        anim.onfinish = () => { anim = null; };
+      } else {
+        d.classList.add('is-closing');
+        anim = body.animate({ height: [`${from}px`, '0px'], opacity: [1, 0] }, { duration: 400, easing: 'ease' });
+        anim.onfinish = () => { d.open = false; d.classList.remove('is-closing'); anim = null; };
+      }
+    });
+  });
 
   /* ---------- URL コピー ---------- */
   document.querySelectorAll('[data-copy]').forEach(btn => {

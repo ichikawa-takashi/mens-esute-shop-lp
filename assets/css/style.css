@@ -106,8 +106,13 @@ a { color: inherit; text-decoration: none; }
 .menu-toggle { display: none; }
 
 /* SP メニュー（エスティーク：右からスライド） */
-.sp-menu { position: fixed; inset: 0; z-index: 60; visibility: hidden; }
-.sp-menu.is-open { visibility: visible; }
+/* 閉じるときはスライドアウト（.45s）が終わってから非表示にする */
+.sp-menu { position: fixed; inset: 0; z-index: 60; visibility: hidden; transition: visibility 0s linear .45s; }
+.sp-menu.is-open { visibility: visible; transition-delay: 0s; }
+.sp-menu__close { position: absolute; top: 10px; right: 12px; width: 44px; height: 44px; cursor: pointer; }
+.sp-menu__close span { position: absolute; top: 22px; left: 11px; width: 22px; height: 1px; background: var(--color-violet-900); }
+.sp-menu__close span:nth-child(1) { transform: rotate(30deg); }
+.sp-menu__close span:nth-child(2) { transform: rotate(-30deg); }
 .sp-menu__mask { position: absolute; inset: 0; background: rgba(47, 38, 80, .7); opacity: 0; transition: opacity .45s; }
 .sp-menu.is-open .sp-menu__mask { opacity: 1; }
 .sp-menu__panel { position: absolute; top: 0; right: 0; width: min(84vw, 420px); height: 100%; background: #fff; transform: translateX(100%); transition: transform .45s var(--ease); padding-top: 96px; padding-left: 36px; }
@@ -521,10 +526,11 @@ a { color: inherit; text-decoration: none; }
 .qa summary { position: relative; display: block; padding-top: 15px; padding-left: 92px; padding-right: 92px; padding-bottom: 15px; background: #F3F1F6; cursor: pointer; list-style: none; font-family: var(--font-mincho); font-size: 20px; font-weight: 700; line-height: 1.6; color: var(--color-violet-800); }
 .qa summary::-webkit-details-marker { display: none; }
 .qa summary::before { content: "Q"; position: absolute; top: 10px; left: 26px; font-family: var(--font-en); font-size: 44px; font-weight: 400; line-height: 1; color: #8A8594; }
-.qa summary::after { content: ""; position: absolute; top: 24px; right: 40px; padding: 5px; border: solid var(--text-primary); border-width: 0 1px 1px 0; transform: rotate(45deg); transition: transform .3s; }
+.qa summary::after { content: ""; position: absolute; top: 24px; right: 40px; padding: 5px; border: solid var(--text-primary); border-width: 0 1px 1px 0; transform: rotate(45deg); transition: transform .3s, top .3s; }
 .qa[open] summary::after { top: 30px; transform: rotate(-135deg); }
-.qa__a { padding-top: 20px; padding-left: 92px; padding-right: 92px; padding-bottom: 20px; background: #fff; }
-.qa__a p { font-size: 15px; line-height: 1.9; }
+.qa.is-closing summary::after { top: 24px; transform: rotate(45deg); } /* 閉じ始めた時点で矢印を戻す */
+.qa__a { overflow: hidden; background: #fff; } /* 高さをアニメーションさせるので余白は中の p に持たせる */
+.qa__a p { padding-top: 20px; padding-left: 92px; padding-right: 92px; padding-bottom: 20px; font-size: 15px; line-height: 1.9; }
 .faq-list .ph--text { min-height: 72px; border-radius: 0; }
 @media (max-width: 767px) {
   .faq { margin-top: 32px; }
@@ -535,8 +541,8 @@ a { color: inherit; text-decoration: none; }
   .qa summary::before { font-size: 32px; left: 14px; top: 13px; }
   .qa summary::after { top: 20px; right: 15px; }
   .qa[open] summary::after { top: 26px; }
-  .qa__a { padding-top: 16px; padding-left: 20px; padding-right: 20px; padding-bottom: 16px; }
-  .qa__a p { font-size: 14px; }
+  .qa.is-closing summary::after { top: 20px; }
+  .qa__a p { padding-top: 16px; padding-left: 20px; padding-right: 20px; padding-bottom: 16px; font-size: 14px; }
 }
 
 /* =========================================================
