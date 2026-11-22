@@ -166,6 +166,7 @@
             <h3 class="about__catch" data-fade>エリアで探しているお客様に、<br>お店とセラピストが届く。</h3>
             <p data-fade>メンズエステを探すお客様のためのサイトです。お店のページには、在籍セラピスト・料金・本日の出勤がまとめて載ります。</p>
             <p data-fade>セラピストは自分で記事と出勤を発信し、フォローしてくれたお客様に新しい記事が届き続けます。セラピストのファンが増えるほど、お店の指名とリピートにつながります。</p>
+            <p data-fade>お客様はエリアを選ぶだけで、本日出勤のセラピストや新着の記事、ランキングを見られます。見るだけなら会員登録はいりません。</p>
             <p class="about__note" data-fade>予約は今まで通り、お店で直接受けます。</p>
           </div>
 
@@ -191,6 +192,7 @@
             <div class="feature__body" data-fade style="--d:200ms" data-num="01">
               <h3 class="feature__ttl">お店のページと在籍一覧</h3>
               <p>店舗情報・写真・料金と、在籍セラピストの一覧を掲載。セラピストの記事もお店のページに並びます。</p>
+              <p>営業時間・アクセス・最寄駅・電話番号・料金システムに、本日の出勤表と所属セラピストの新着記事まで、お客様が知りたいことを1ページにまとめます。</p>
             </div>
           </li>
           <li class="feature">
@@ -198,6 +200,7 @@
             <div class="feature__body" data-fade style="--d:200ms" data-num="02">
               <h3 class="feature__ttl">お知らせ・イベントの投稿</h3>
               <p>キャンペーンや新人の紹介を、お店から直接お知らせできます。</p>
+              <p>投稿したお知らせは、サイトのトップページとお店のページに表示されます。新人の入店や期間限定のイベントを、エリアで探しているお客様にすぐ届けられます。</p>
             </div>
           </li>
           <li class="feature">
@@ -205,6 +208,7 @@
             <div class="feature__body" data-fade style="--d:200ms" data-num="03">
               <h3 class="feature__ttl">出勤は運営が更新</h3>
               <p>参考になるお店のホームページ（出勤表）を教えていただければ、運営が出勤予定を更新します。二重入力はいりません。</p>
+              <p>お店の管理画面やセラピスト本人からも、日ごとに登録・変更できます。本人が予定を変えたときは印が付き、お店にお知らせが届くので、急な変更も見逃しません。</p>
             </div>
           </li>
           <li class="feature">
@@ -212,6 +216,7 @@
             <div class="feature__body" data-fade style="--d:200ms" data-num="04">
               <h3 class="feature__ttl">記事をお店で確認</h3>
               <p>セラピストの記事は、すぐに公開するか、お店が承認してから公開するかを選べます。</p>
+              <p>承認制にすると、承認待ちの記事を一覧で確かめ、承認するか、コメントを付けて差し戻せます。公開したあとの記事も、お店から非公開にできます。</p>
             </div>
           </li>
         </ol>
@@ -219,7 +224,7 @@
     </section>
 
     <!-- ============ For Therapists ============ -->
-    <section class="sec sec-therapists bg-silk" id="therapists">
+    <section class="sec sec-therapists bg-blush" id="therapists">
       <div class="container">
         <h2 class="ttl-left" data-fade>
           <span class="ttl-left__en">For Therapists</span>
@@ -227,21 +232,24 @@
         </h2>
         <p class="sec-lead" data-fade>セラピストの発信が増えるほど、お店の露出も増えます。</p>
 
-        <!-- 聖心美容クリニック 小顔LP「聖心が選ばれる理由」（.reason-h3 / .reason-p） -->
-        <div class="reason">
-          <div class="reason__item" data-fade>
-            <h3 class="reason__h3">AI が文章を手伝う</h3>
-            <p class="reason__p">記事の下書きや DM の返信を AI が考えます。文章が苦手でも続けられます。</p>
-          </div>
-          <div class="reason__item" data-fade>
-            <h3 class="reason__h3">連絡先の交換を止める</h3>
-            <p class="reason__p">電話番号や SNS の ID、NG ワードを含む記事や DM は送れません。お店の外のやりとりを防ぎます。</p>
-          </div>
-          <div class="reason__item" data-fade>
-            <h3 class="reason__h3">ブロックと通報</h3>
-            <p class="reason__p">困ったお客様はブロックでき、通報は運営が確認して対応します。</p>
-          </div>
-        </div>
+        <!-- エスティーク トップ「For New Customers」（.list-new-customer） -->
+        <ul class="nc-list">
+          <li class="nc-item" data-fade>
+            <h3 class="nc-item__title">AI が文章を手伝う</h3>
+            <p>記事の下書きや DM の返信を AI が考えます。文章が苦手でも続けられます。</p>
+            <p>ChatGPT・Gemini・Claude につなぐと、頼むだけで記事の下書きができます。下書きで保存されるので、写真を足して確かめてから公開。AI が動くのは、本人が頼んだときだけです。</p>
+          </li>
+          <li class="nc-item" data-fade style="--d:150ms">
+            <h3 class="nc-item__title">連絡先の交換を止める</h3>
+            <p>電話番号や SNS の ID、NG ワードを含む記事や DM は送れません。お店の外のやりとりを防ぎます。</p>
+            <p>トーク画面では個人情報を送らないよう案内し、写真の位置情報はアップロードのときに消します。</p>
+          </li>
+          <li class="nc-item" data-fade style="--d:300ms">
+            <h3 class="nc-item__title">ブロックと通報</h3>
+            <p>困ったお客様はブロックでき、通報は運営が確認して対応します。</p>
+            <p>通報されたやりとり以外は、運営もお店も読みません。誰がフォローやいいねをしたかも表示しないので、お客様も安心して使えます。</p>
+          </li>
+        </ul>
       </div>
     </section>
 
@@ -261,21 +269,21 @@
             <p class="promise__num">01</p>
             <h3 class="promise__ttl">発信が増えて、<br>指名・リピートにつながる</h3>
           </div>
-          <div class="promise__body"><p>セラピストが発信しやすくなると、フォローするお客様が増え、指名とリピートの土台になります。</p></div>
+          <div class="promise__body"><p>セラピストが発信しやすくなると、フォローするお客様が増え、指名とリピートの土台になります。</p><p>フォロー中のお客様には、新しい記事がタイムラインとお知らせで届きます。記事への「いいね」やフォロワー数はランキングにも反映され、記事の閲覧数・いいね数・新しいフォロワー数は、お店のダッシュボードで確認できます。</p></div>
         </li>
         <li class="promise" data-fade>
           <div class="promise__tab">
             <p class="promise__num">02</p>
             <h3 class="promise__ttl">エリアで探すお客様の<br>目に留まる</h3>
           </div>
-          <div class="promise__body"><p>セラピストの記事とお店のお知らせが、エリアのページに並びます。</p></div>
+          <div class="promise__body"><p>セラピストの記事とお店のお知らせが、エリアのページに並びます。</p><p>本日出勤のセラピストはトップページにも並びます。記事は1本ずつ専用のページを持つので、検索や SNS のシェアからも、新しいお客様が訪れます。</p></div>
         </li>
         <li class="promise" data-fade>
           <div class="promise__tab">
             <p class="promise__num">03</p>
             <h3 class="promise__ttl">在籍の安定と<br>求人のアピールに</h3>
           </div>
-          <div class="promise__body"><p>「ファンを作りやすいお店」として、セラピストに選ばれやすくなります。面接での説明にも使えます。</p></div>
+          <div class="promise__body"><p>「ファンを作りやすいお店」として、セラピストに選ばれやすくなります。面接での説明にも使えます。</p><p>AI の下書きや DM の返信の提案、連絡先の交換の禁止、ブロックと通報。セラピストが安心して発信を続けられる環境を、お店の魅力として伝えられます。</p></div>
         </li>
       </ol>
     </section>
@@ -283,30 +291,26 @@
     <!-- ============ Campaign（CV帯） ============ -->
     <section class="sec sec-campaign bg-silk" id="campaign">
       <div class="container">
-        <h2 class="ttl" data-fade>
-          <span class="ttl__en">Campaign</span>
-          <span class="ttl__jp">今なら、年内は掲載無料</span>
-        </h2>
-        <p class="campaign__lead" data-fade>いま掲載を始める店舗さまは、<br>2026年12月31日まで掲載の料金が無料です。</p>
-
-        <!-- 表参道メディカルクリニック ピコシュアLP の価格ボックス（.detail / .price / .detail p） -->
-        <div class="price-box" data-fade>
-          <div class="price">
-            <span class="price__title">今なら</span>
-            <span class="price__txt">年内<span class="price__num">掲載無料</span></span>
-          </div>
-          <ul class="price-add">
-            <li><span class="price-add__title">年内は掲載無料</span><span class="price-add__txt">12月31日まで、料金はかかりません。</span></li>
-            <li><span class="price-add__title">最初の登録は運営が代行</span><span class="price-add__txt">最初の在籍セラピストの登録は、運営が代わりに行います。</span></li>
-            <li><span class="price-add__title">出勤も運営が更新</span><span class="price-add__txt">参考になるホームページを見て、運営が出勤予定を更新します。</span></li>
+        <!-- 聖心美容クリニック 小顔LP「4つの安心保証制度」（.assurance） -->
+        <div class="assurance">
+          <h2 class="assurance__title" data-fade>
+            <span class="assurance__en">Campaign</span>
+            <span class="assurance__t1">今なら、</span>
+            <span class="assurance__t2">年内は掲載無料</span>
+          </h2>
+          <ul class="assurance__row">
+            <li class="assurance__col" data-fade><div class="assurance__inner"><span class="assurance__num">1</span><p class="assurance__text">年内は掲載無料<small>12月31日まで、料金はかかりません。</small></p></div></li>
+            <li class="assurance__col" data-fade><div class="assurance__inner"><span class="assurance__num">2</span><p class="assurance__text">最初の登録は運営が代行<small>最初の在籍セラピストの登録は、運営が代わりに行います。</small></p></div></li>
+            <li class="assurance__col" data-fade><div class="assurance__inner"><span class="assurance__num">3</span><p class="assurance__text">出勤も運営が更新<small>参考になるホームページを見て、運営が出勤予定を更新します。</small></p></div></li>
           </ul>
-          <p class="price-box__note">※ 来年からの料金は、決まりしだいご案内します。</p>
-        </div>
-
-        <!-- 表参道メディカルクリニック ピコシュアLP の見出し（.headLine01） -->
-        <p class="headline01" data-fade>お店の運用の手間は、<br class="md:hidden">ゼロで始められます。</p>
-        <div class="campaign__cta" data-fade>
-          <a href="#contact" class="btn-cv">掲載について問い合わせる</a>
+          <div class="assurance__p" data-fade>
+            <p>いま掲載を始める店舗さまは、<br class="md:hidden">2026年12月31日まで掲載の料金が無料です。</p>
+            <p class="assurance__zero">お店の運用の手間は、<br class="md:hidden">ゼロで始められます。</p>
+            <p class="assurance__note">※ 来年からの料金は、決まりしだいご案内します。</p>
+          </div>
+          <div class="assurance__btn" data-fade>
+            <a href="#contact" class="btn-cv">掲載について問い合わせる</a>
+          </div>
         </div>
       </div>
     </section>
@@ -340,7 +344,7 @@
         <!-- 聖心美容クリニック 小顔LP「まずはお電話で」CTA（.cta-msg-txt1 / .cta-top__desc / .c-btn-lead / ボタン） -->
         <div class="share" data-fade>
           <h3 class="share__msg">セラピスト登録のご案内</h3>
-          <div class="share__desc"><p>登録は無料です。登録のあと、お店に所属申請してもらいます。</p></div>
+          <div class="share__desc"><p>登録は無料です。登録のあと、お店に所属申請してもらいます。</p><p>記事の投稿や DM も無料。お店が承認すると、お店のページに掲載されます。</p></div>
           <div class="share__btns">
             <p class="share__lead">下のページを、LINE などでセラピストに送ってください。</p>
             <div class="share__url">
@@ -361,37 +365,55 @@
           <span class="ttl__jp">よくある質問</span>
         </h2>
 
-        <!-- LACOCO トップ「Q&A よくあるご質問」（.ASQA_box / .ASQA_box_heading / .ASQA_list02） -->
+        <!-- エスティーク /faq/（.title-course / .faq-list / .title-question / .ans） -->
         <div class="faq">
-          <div class="faq-box" data-fade>
-            <h3 class="faq-box__head">掲載について</h3>
-            <ul class="faq-box__list">
-              <li><details class="qa">
-                <summary>掲載までどのくらいかかりますか？</summary>
-                <div class="qa__a"><p>審査と初期設定が終わりしだい、掲載を始めます。</p></div>
-              </details></li>
-              <li><details class="qa">
-                <summary>予約の受け方は変わりますか？</summary>
-                <div class="qa__a"><p>変わりません。予約は今まで通りお店で直接受けます。空き状況の表示は、使いたい店舗だけ使えます。</p></div>
-              </details></li>
-              <li><details class="qa">
-                <summary>掲載にあたって必要なものは？</summary>
-                <div class="qa__a"><p>店舗様のホームページの各セラピスト様のページに、当サイトのアイコンとリンクを貼っていただくことが条件です。なお、掲載したセラピスト様が未成年であった場合は、店舗様の責任とさせていただきます。</p></div>
-              </details></li>
-            </ul>
+          <h3 class="faq__cat" data-fade>掲載について</h3>
+          <div class="faq-list">
+            <details class="qa" data-fade>
+              <summary>掲載までどのくらいかかりますか？</summary>
+              <div class="qa__a"><p>審査と初期設定が終わりしだい、掲載を始めます。</p></div>
+            </details>
+            <details class="qa" data-fade>
+              <summary>予約の受け方は変わりますか？</summary>
+              <div class="qa__a"><p>変わりません。予約は今まで通りお店で直接受けます。空き状況の表示は、使いたい店舗だけ使えます。</p></div>
+            </details>
+            <details class="qa" data-fade>
+              <summary>掲載にあたって必要なものは？</summary>
+              <div class="qa__a"><p>店舗様のホームページの各セラピスト様のページに、当サイトのアイコンとリンクを貼っていただくことが条件です。なお、掲載したセラピスト様が未成年であった場合は、店舗様の責任とさせていただきます。</p></div>
+            </details>
           </div>
-          <!-- 以下3カテゴリは旧サイトの静的HTMLに原稿がなかったため、ダミー -->
-          <div class="faq-box" data-fade>
-            <h3 class="faq-box__head">料金</h3>
-            <div class="faq-box__dummy"><div class="ph ph--text"><span>FAQ「料金」原稿待ち</span></div></div>
+          <h3 class="faq__cat" data-fade>料金</h3>
+          <div class="faq-list">
+            <details class="qa" data-fade>
+              <summary>料金はいくらですか？</summary>
+              <div class="qa__a"><p>今なら、2026年12月31日まで無料です。来年からの料金は、決まりしだいご案内します。</p></div>
+            </details>
           </div>
-          <div class="faq-box" data-fade>
-            <h3 class="faq-box__head">セラピスト・出勤</h3>
-            <div class="faq-box__dummy"><div class="ph ph--text"><span>FAQ「セラピスト・出勤」原稿待ち</span></div></div>
+          <h3 class="faq__cat" data-fade>セラピスト・出勤</h3>
+          <div class="faq-list">
+            <details class="qa" data-fade>
+              <summary>セラピストの記事は、お店で確認できますか？</summary>
+              <div class="qa__a"><p>できます。すぐに公開するか、お店が承認してから公開するかを選べます。</p></div>
+            </details>
+            <details class="qa" data-fade>
+              <summary>セラピストはどうやって登録しますか？</summary>
+              <div class="qa__a"><p>セラピスト登録のご案内ページから、セラピストが自分でアカウントを作り、お店に所属申請します。お店が承認すると掲載されます。年内に掲載を始める店舗は、最初の在籍セラピストの登録を運営が代わりに行います。</p></div>
+            </details>
+            <details class="qa" data-fade>
+              <summary>出勤予定は誰が入れますか？</summary>
+              <div class="qa__a"><p>お店からもセラピスト本人からも入れて、変更できます。参考になるホームページがあれば、運営が更新することもできます。変更はお知らせで届きます。</p></div>
+            </details>
+            <details class="qa" data-fade>
+              <summary>セラピストが退店したら？</summary>
+              <div class="qa__a"><p>お店のページと記事は非公開になります。セラピストのアカウントは残り、別のお店に申請できます。</p></div>
+            </details>
           </div>
-          <div class="faq-box" data-fade>
-            <h3 class="faq-box__head">その他</h3>
-            <div class="faq-box__dummy"><div class="ph ph--text"><span>FAQ「その他」原稿待ち</span></div></div>
+          <h3 class="faq__cat" data-fade>その他</h3>
+          <div class="faq-list">
+            <details class="qa" data-fade>
+              <summary>お客様とセラピストのやりとりは見られますか？</summary>
+              <div class="qa__a"><p>DM はお客様とセラピストの間のものです。通報があったときだけ、運営がそのメッセージと前後のやりとりを確認します。</p></div>
+            </details>
           </div>
         </div>
       </div>
@@ -406,24 +428,24 @@
         </h2>
         <p class="sec-lead text-center" data-fade>3営業日以内に、メールでご連絡します。</p>
 
-        <!-- 表参道メディカルクリニック ピコシュアLP「ご予約･無料カウンセリング」フォーム（.b4a_reserveBlock） -->
+        <!-- エスティーク /contact/（.contact-form dl / dt / dd / .form-label） -->
         <form class="form" data-fade onsubmit="return false;">
-          <dl class="form__row">
-            <dt><label for="name">お名前（店舗名）</label></dt>
+          <dl>
+            <dt><label for="name" class="form__title">お名前（店舗名）</label><span class="form__label">必須</span></dt>
             <dd><input type="text" id="name" name="name" required autocomplete="organization"></dd>
           </dl>
-          <dl class="form__row">
-            <dt><label for="email">メールアドレス</label></dt>
+          <dl>
+            <dt><label for="email" class="form__title">メールアドレス</label><span class="form__label">必須</span></dt>
             <dd><input type="email" id="email" name="email" required autocomplete="email"></dd>
           </dl>
-          <dl class="form__row">
-            <dt><label for="body">お問い合わせ内容</label></dt>
+          <dl>
+            <dt><label for="body" class="form__title">お問い合わせ内容</label><span class="form__label">必須</span></dt>
             <dd>
               <textarea id="body" name="body" rows="6" required maxlength="2000"></textarea>
               <p class="form__hint">エリア・在籍人数・出勤の参考になるホームページの URL など</p>
             </dd>
           </dl>
-          <div class="form__btn"><button type="submit">送信する</button></div>
+          <div class="form__btn"><button type="submit" class="btn-cv">送信する</button></div>
         </form>
       </div>
     </section>
