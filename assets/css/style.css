@@ -20,9 +20,9 @@
   --color-accent-dark: #8E1F59;  /* CTAの影 */
   --color-accent-light: #F3C6DE; /* 濃色背景上のアクセント */
 
-  --font-en: "Prata", serif;
+  --font-en: "Cormorant", serif;
   --font-mincho: "Noto Serif JP", "Yu Mincho", YuMincho, serif;
-  --font-catch: "Shippori Mincho", "Noto Serif JP", serif;
+  --font-catch: "Noto Serif JP", "Yu Mincho", YuMincho, serif;
   --font-sans: "Noto Sans JP", "Hiragino Kaku Gothic ProN", "Yu Gothic", sans-serif;
 
   --header-h: 76px;
@@ -37,6 +37,7 @@ body {
   background: var(--color-base);
   color: var(--text-primary);
   -webkit-font-smoothing: antialiased;
+  font-variant-numeric: lining-nums; /* Cormorant の数字を大文字の高さにそろえる（01 が o1 に見えないように） */
   overflow-x: hidden;
 }
 @supports (overflow: clip) { body { overflow-x: clip; } }
